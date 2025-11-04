@@ -6,6 +6,13 @@ pipeline {
         maven 'maven3'
     }
     stages {   
+
+        stage("hello from bugfix"){
+            steps{
+                echo "hello from bugfix"
+            }
+        }
+        
         stage('Compile') {
             steps {
             sh 'mvn compile'
